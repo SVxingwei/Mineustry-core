@@ -1,0 +1,18 @@
+{
+  "itemGroup.coremod": "Core Mod",
+  "block.coremod.core_block": "Core Block",
+  "container.coremod.core_block": "Core",
+  "gui.coremod.core_block.title": "Core",
+  "gui.coremod.core_block.energy": "Energy: %d/%d RF",
+  "gui.coremod.core_block.storage": "Core Count: %d | Max Per Type: %d",
+  "gui.coremod.core_block.settings": "Settings",
+  "gui.coremod.core_block.crafting": "Crafting",
+  "gui.coremod.core_block.storage_browser": "Storage Browser",
+  "gui.coremod.settings.title": "Core Settings",
+  "gui.coremod.settings.core_id": "Core ID",
+  "gui.coremod.settings.is_public": "Public Core",
+  "gui.coremod.settings.allow_others": "Allow Others to Access",
+  "gui.coremod.settings.burn_overflow": "Burn Overflow Items",
+  "gui.coremod.settings.save": "Save",
+  "gui.coremod.settings.cancel": "Cancel"
+}

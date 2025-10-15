@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "part=main": {
+      "model": "coremod:block/core_block_main"
+    },
+    "part=x_pos": {
+      "model": "coremod:block/core_block_x_pos"
+    },
+    "part=z_pos": {
+      "model": "coremod:block/core_block_z_pos"
+    },
+    "part=x_pos_z_pos": {
+      "model": "coremod:block/core_block_x_pos_z_pos"
+    }
+  }
+}

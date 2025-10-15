@@ -1,0 +1,18 @@
+{
+  "itemGroup.coremod": "核心模组",
+  "block.coremod.core_block": "核心方块",
+  "container.coremod.core_block": "核心",
+  "gui.coremod.core_block.title": "核心",
+  "gui.coremod.core_block.energy": "能量: %d/%d RF",
+  "gui.coremod.core_block.storage": "核心数量: %d | 每类最大: %d",
+  "gui.coremod.core_block.settings": "设置",
+  "gui.coremod.core_block.crafting": "合成",
+  "gui.coremod.core_block.storage_browser": "存储浏览",
+  "gui.coremod.settings.title": "核心设置",
+  "gui.coremod.settings.core_id": "核心ID",
+  "gui.coremod.settings.is_public": "公共核心",
+  "gui.coremod.settings.allow_others": "允许其他玩家访问",
+  "gui.coremod.settings.burn_overflow": "烧毁溢出物品",
+  "gui.coremod.settings.save": "保存",
+  "gui.coremod.settings.cancel": "取消"
+}
