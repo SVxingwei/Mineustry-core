@@ -1,0 +1,49 @@
+{
+  "variants": {
+    "facing=north,part=top_right": {
+      "model": "coremod:block/core_block"
+    },
+    "facing=north,part=bottom_left": {
+      "model": "coremod:block/core_block"
+    },
+    "facing=north,part=bottom_right": {
+      "model": "coremod:block/core_block"
+    },
+    "facing=south,part=top_right": {
+      "model": "coremod:block/core_block",
+      "y": 180
+    },
+    "facing=south,part=bottom_left": {
+      "model": "coremod:block/core_block",
+      "y": 180
+    },
+    "facing=south,part=bottom_right": {
+      "model": "coremod:block/core_block",
+      "y": 180
+    },
+    "facing=west,part=top_right": {
+      "model": "coremod:block/core_block",
+      "y": 270
+    },
+    "facing=west,part=bottom_left": {
+      "model": "coremod:block/core_block",
+      "y": 270
+    },
+    "facing=west,part=bottom_right": {
+      "model": "coremod:block/core_block",
+      "y": 270
+    },
+    "facing=east,part=top_right": {
+      "model": "coremod:block/core_block",
+      "y": 90
+    },
+    "facing=east,part=bottom_left": {
+      "model": "coremod:block/core_block",
+      "y": 90
+    },
+    "facing=east,part=bottom_right": {
+      "model": "coremod:block/core_block",
+      "y": 90
+    }
+  }
+}

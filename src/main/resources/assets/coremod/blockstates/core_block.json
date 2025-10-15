@@ -1,10 +1,19 @@
 {
   "variants": {
-    "master=true": {
+    "facing=north": {
       "model": "coremod:block/core_block"
     },
-    "master=false": {
-      "model": "coremod:block/core_block"
+    "facing=south": {
+      "model": "coremod:block/core_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "coremod:block/core_block",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "coremod:block/core_block",
+      "y": 90
     }
   }
 }

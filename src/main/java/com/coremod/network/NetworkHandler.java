@@ -45,6 +45,12 @@ public class NetworkHandler {
                 .consumerMainThread(PacketExtractItem::handle)
                 .add();
 
+        INSTANCE.messageBuilder(PacketInsertItem.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(PacketInsertItem::new)
+                .encoder(PacketInsertItem::toBytes)
+                .consumerMainThread(PacketInsertItem::handle)
+                .add();
+
         INSTANCE.messageBuilder(PacketConfigUpdate.class, id(), NetworkDirection.PLAY_TO_SERVER)
                 .decoder(PacketConfigUpdate::new)
                 .encoder(PacketConfigUpdate::toBytes)

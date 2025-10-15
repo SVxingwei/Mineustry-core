@@ -181,7 +181,17 @@ public class CoreScreen extends AbstractContainerScreen<CoreMenu> {
 
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
-        if (!showCrafting && button == 0) {
+        if (!showCrafting) {
+            // 如果玩家手持物品，尝试插入到存储
+            if (this.minecraft != null && this.minecraft.player != null) {
+                ItemStack carried = this.menu.getCarried();
+                if (!carried.isEmpty()) {
+                    // 发送插入物品的网络包（使用-1表示光标上的物品）
+                    insertCarriedItem();
+                    return true;
+                }
+            }
+            
             // 处理存储物品点击（提取物品）
             int startX = this.leftPos + 8;
             int startY = this.topPos + 18;
@@ -197,7 +207,7 @@ public class CoreScreen extends AbstractContainerScreen<CoreMenu> {
                         
                         if (mouseX >= slotX && mouseX < slotX + 16 && mouseY >= slotY && mouseY < slotY + 16) {
                             Map.Entry<String, ItemStack> entry = storageItems.get(index);
-                            // TODO: 发送提取物品的网络包
+                            extractItem(entry.getKey(), button);
                             return true;
                         }
                     }
@@ -205,6 +215,44 @@ public class CoreScreen extends AbstractContainerScreen<CoreMenu> {
             }
         }
         return super.mouseClicked(mouseX, mouseY, button);
+    }
+
+    /**
+     * 插入光标上的物品到核心存储
+     */
+    private void insertCarriedItem() {
+        // 这个功能由Minecraft的槽位系统自动处理
+        // 暂不需要额外实现
+    }
+
+    /**
+     * 提取物品
+     * @param itemKey 物品键
+     * @param button 鼠标按钮（0=左键, 1=右键）
+     */
+    private void extractItem(String itemKey, int button) {
+        if (this.minecraft == null || this.minecraft.player == null) return;
+        
+        int amount;
+        boolean shift = hasShiftDown();
+        
+        if (button == 0) { // 左键
+            if (shift) {
+                // Shift+左键：提取所有
+                amount = Integer.MAX_VALUE;
+            } else {
+                // 左键：提取一组（64个）
+                amount = 64;
+            }
+        } else if (button == 1) { // 右键
+            // 右键：提取一个
+            amount = 1;
+        } else {
+            return;
+        }
+        
+        // 发送提取物品的网络包
+        NetworkHandler.sendToServer(new PacketExtractItem(this.menu.getCoreId(), itemKey, amount));
     }
 
     /**

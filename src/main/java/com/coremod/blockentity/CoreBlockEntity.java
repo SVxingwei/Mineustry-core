@@ -19,6 +19,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.energy.IEnergyStorage;
+import net.minecraftforge.items.IItemHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -32,6 +33,9 @@ public class CoreBlockEntity extends BlockEntity implements MenuProvider {
     // 能量存储（用于与其他模组兼容）
     private final CoreEnergyStorage energyStorage = new CoreEnergyStorage();
     private final LazyOptional<IEnergyStorage> energyOptional = LazyOptional.of(() -> energyStorage);
+    
+    // 物品处理器（用于自动插入）
+    private LazyOptional<IItemHandler> itemHandlerOptional = LazyOptional.empty();
 
     public CoreBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.CORE_BLOCK_ENTITY.get(), pos, state);
@@ -70,6 +74,11 @@ public class CoreBlockEntity extends BlockEntity implements MenuProvider {
             CoreStorage storage = CoreStorage.get(serverLevel);
             storage.registerCore(blockEntity.config.getActualStorageId());
             blockEntity.isRegistered = true;
+            
+            // 初始化物品处理器
+            blockEntity.itemHandlerOptional = LazyOptional.of(() -> 
+                new CoreItemHandler(blockEntity, blockEntity.config.getActualStorageId()));
+            
             blockEntity.setChanged();
         }
     }
@@ -105,6 +114,9 @@ public class CoreBlockEntity extends BlockEntity implements MenuProvider {
         if (cap == ForgeCapabilities.ENERGY) {
             return energyOptional.cast();
         }
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
+            return itemHandlerOptional.cast();
+        }
         return super.getCapability(cap, side);
     }
 
@@ -112,6 +124,7 @@ public class CoreBlockEntity extends BlockEntity implements MenuProvider {
     public void invalidateCaps() {
         super.invalidateCaps();
         energyOptional.invalidate();
+        itemHandlerOptional.invalidate();
     }
 
     public CoreConfig getConfig() {
