@@ -1,0 +1,15 @@
+{
+  "block.coremod.core_block": "核心方块",
+  "item.coremod.core_block": "核心方块",
+  "itemGroup.coremod.core_tab": "核心模组",
+  "container.coremod.core": "核心",
+  "gui.coremod.core.crafting": "合成",
+  "gui.coremod.core.storage": "存储",
+  "gui.coremod.core.settings": "设置",
+  "gui.coremod.core.capacity": "容量",
+  "gui.coremod.core.config.core_id": "核心ID",
+  "gui.coremod.core.config.is_public": "公共核心",
+  "gui.coremod.core.config.allow_others": "允许其他玩家",
+  "gui.coremod.core.config.burn_overflow": "烧毁溢出物品",
+  "gui.coremod.core.config.owner": "拥有者"
+}

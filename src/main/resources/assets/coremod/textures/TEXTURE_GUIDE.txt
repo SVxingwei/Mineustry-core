@@ -1,0 +1,30 @@
+纹理文件指南 / Texture File Guide
+========================================
+
+请将以下纹理文件放置在相应的位置：
+Please place the following texture files in their respective locations:
+
+1. 方块纹理 / Block Texture:
+   路径 / Path: block/core_block.png
+   尺寸 / Size: 16x16 pixels
+   描述 / Description: 核心方块的主纹理，建议使用科技风格的设计，可以参考应用能源2的驱动器外观
+
+2. GUI纹理 / GUI Texture:
+   路径 / Path: gui/core_gui.png
+   尺寸 / Size: 256x256 pixels
+   描述 / Description: 核心GUI的背景纹理
+   
+   GUI布局说明：
+   - 主界面大小：176x166像素
+   - 合成网格：3x3槽位，位于左侧
+   - 合成结果：1个槽位，位于合成网格右侧
+   - 存储浏览：6列x3行的物品网格
+   - 滚动条：位于右侧
+
+建议的纹理风格：
+- 使用科技/未来主义风格
+- 主色调：深蓝色、青色、银色
+- 添加发光效果以增强视觉效果
+- 参考应用能源2（Applied Energistics 2）的GUI设计
+
+如果没有自定义纹理，游戏将使用Minecraft的默认缺失纹理（紫黑方格）。

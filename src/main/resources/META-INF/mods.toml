@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All rights reserved"
+
+[[mods]]
+modId="coremod"
+version="1.0.0"
+displayName="Core Block Mod"
+description='''
+A mod that adds a powerful Core block with infinite storage capabilities.
+核心方块模组 - 添加一个强大的核心方块，具有近乎无限的存储能力。
+'''
+
+[[dependencies.coremod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47.2.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.coremod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"

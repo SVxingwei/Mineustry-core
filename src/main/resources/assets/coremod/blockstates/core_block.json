@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "master=true": {
+      "model": "coremod:block/core_block"
+    },
+    "master=false": {
+      "model": "coremod:block/core_block"
+    }
+  }
+}

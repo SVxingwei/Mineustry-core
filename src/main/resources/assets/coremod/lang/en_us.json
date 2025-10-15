@@ -1,0 +1,15 @@
+{
+  "block.coremod.core_block": "Core Block",
+  "item.coremod.core_block": "Core Block",
+  "itemGroup.coremod.core_tab": "Core Mod",
+  "container.coremod.core": "Core",
+  "gui.coremod.core.crafting": "Crafting",
+  "gui.coremod.core.storage": "Storage",
+  "gui.coremod.core.settings": "Settings",
+  "gui.coremod.core.capacity": "Capacity",
+  "gui.coremod.core.config.core_id": "Core ID",
+  "gui.coremod.core.config.is_public": "Public Core",
+  "gui.coremod.core.config.allow_others": "Allow Others",
+  "gui.coremod.core.config.burn_overflow": "Burn Overflow Items",
+  "gui.coremod.core.config.owner": "Owner"
+}
