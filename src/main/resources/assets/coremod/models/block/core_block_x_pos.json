@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "coremod:block/core_block_side",
+    "down": "coremod:block/core_block_bottom",
+    "up": "coremod:block/core_block_top",
+    "north": "coremod:block/core_block_side",
+    "east": "coremod:block/core_block_side",
+    "south": "coremod:block/core_block_side",
+    "west": "coremod:block/core_block_side"
+  }
+}
