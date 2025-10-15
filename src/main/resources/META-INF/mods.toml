@@ -1,42 +1,26 @@
 modLoader="javafml"
 loaderVersion="[47,)"
-license="MIT"
+license="All rights reserved"
 
 [[mods]]
 modId="coremod"
-version="${file.jarVersion}"
-displayName="Core Mod"
+version="1.0.0"
+displayName="Core Block Mod"
 description='''
-A powerful core block mod for Minecraft 1.20.1
-Adds a 2x2 core block with infinite storage, crafting, and AE2/RS integration
+A mod that adds a powerful Core block with infinite storage capabilities.
+核心方块模组 - 添加一个强大的核心方块，具有近乎无限的存储能力。
 '''
-authors="CoreMod Team"
-credits="Inspired by Applied Energistics 2"
 
 [[dependencies.coremod]]
-modId="forge"
-mandatory=true
-versionRange="[47,)"
-ordering="NONE"
-side="BOTH"
+    modId="forge"
+    mandatory=true
+    versionRange="[47.2.0,)"
+    ordering="NONE"
+    side="BOTH"
 
 [[dependencies.coremod]]
-modId="jei"
-mandatory=false
-versionRange="[12.4.0,)"
-ordering="NONE"
-side="BOTH"
-
-[[dependencies.coremod]]
-modId="appliedenergistics2"
-mandatory=false
-versionRange="[12.0.0,)"
-ordering="NONE"
-side="BOTH"
-
-[[dependencies.coremod]]
-modId="refinedstorage"
-mandatory=false
-versionRange="[1.12.0,)"
-ordering="NONE"
-side="BOTH"
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"

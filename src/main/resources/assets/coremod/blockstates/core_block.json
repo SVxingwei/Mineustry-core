@@ -1,16 +1,19 @@
 {
   "variants": {
-    "part=main": {
-      "model": "coremod:block/core_block_main"
+    "facing=north": {
+      "model": "coremod:block/core_block"
     },
-    "part=x_pos": {
-      "model": "coremod:block/core_block_x_pos"
+    "facing=south": {
+      "model": "coremod:block/core_block",
+      "y": 180
     },
-    "part=z_pos": {
-      "model": "coremod:block/core_block_z_pos"
+    "facing=west": {
+      "model": "coremod:block/core_block",
+      "y": 270
     },
-    "part=x_pos_z_pos": {
-      "model": "coremod:block/core_block_x_pos_z_pos"
+    "facing=east": {
+      "model": "coremod:block/core_block",
+      "y": 90
     }
   }
 }
